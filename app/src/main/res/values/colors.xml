@@ -3,6 +3,7 @@
     <color name="colorPrimary">#fcfcfc</color>
     <color name="colorPrimaryDark">#889dfe</color>
     <color name="colorAccent">#889dfe</color>
+    <color name="colorCarrot">#e78111</color>
 
     <!-- 기본 -->
     <color name="white">#FFFFFF</color>
