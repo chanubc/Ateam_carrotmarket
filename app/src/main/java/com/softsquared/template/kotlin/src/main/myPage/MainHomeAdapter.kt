@@ -1,7 +1,12 @@
 package com.softsquared.template.kotlin.src.main.myPage
 
+import android.app.PendingIntent.getActivity
+import android.content.Intent
+import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.softsquared.template.kotlin.databinding.RowBinding
 
@@ -11,7 +16,7 @@ class  MainHomeAdapter(val items: ArrayList<MainHomeData>) : RecyclerView.Adapte
         fun OnItemClick(data: MainHomeData)
     }
 
-    fun moveItem(oldPos: Int, newPos: Int) {
+/*    fun moveItem(oldPos: Int, newPos: Int) {
         val item = items[oldPos]
         items.removeAt(oldPos)
         items.add(newPos, item)
@@ -21,7 +26,7 @@ class  MainHomeAdapter(val items: ArrayList<MainHomeData>) : RecyclerView.Adapte
     fun removeItem(pos: Int) {
         items.removeAt(pos)
         notifyItemRemoved(pos)
-    }
+    }*/
 
     var itemClickListener: OnItemClickListener? = null //초기값 null값
 
@@ -29,6 +34,10 @@ class  MainHomeAdapter(val items: ArrayList<MainHomeData>) : RecyclerView.Adapte
         init {
             binding.recyclerViewHome.setOnClickListener {
                 itemClickListener?.OnItemClick(items[adapterPosition]) //?는 null일 수 도 있다고 알려주는 역할
+               /* val intent = Intent(this,detailPageActivity::class.java)
+                startActivity(intent)*/
+
+
 
             }
 

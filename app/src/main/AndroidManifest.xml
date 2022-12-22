@@ -15,7 +15,9 @@
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
         <activity
-            android:name=".detailPageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:name=".src.main.myPage.detailPageActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
