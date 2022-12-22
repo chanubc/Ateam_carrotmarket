@@ -27,9 +27,10 @@ class  MainHomeAdapter(val items: ArrayList<MainHomeData>) : RecyclerView.Adapte
 
     inner class ViewHolder(val binding: RowBinding) : RecyclerView.ViewHolder(binding.root) {
         init {
-          /*  binding.cardListView.setOnClickListener {
+            binding.recyclerViewHome.setOnClickListener {
                 itemClickListener?.OnItemClick(items[adapterPosition]) //?는 null일 수 도 있다고 알려주는 역할
-            }*/
+
+            }
 
         }
 
@@ -44,8 +45,11 @@ class  MainHomeAdapter(val items: ArrayList<MainHomeData>) : RecyclerView.Adapte
 //        var isClicked: Boolean = true
 
         holder.binding.apply {
-           /* textViewDifficulty.text= "난이도 ${position+1}"
-            textViewMission.text = items[position].mission*/
+//            imageView = items[position].img
+            textName.text = items[position].name.toString()
+            textLocate.text = items[position].location.toString()
+            textPrice.text = items[position].price.toString()
+//            textViewDifficulty.text= "난이도 ${position+1}"
         }
         /* holder.binding.textName.text = items[position].label.toString()
          holder.binding.textCost.text = items[position].value.toInt().toString()+" won"*/
@@ -61,7 +65,11 @@ class  MainHomeAdapter(val items: ArrayList<MainHomeData>) : RecyclerView.Adapte
                 isClicked = true
             }
         }*/
+
+
     }
+
+
     /*fun onRenewViewViewHolder(holder: ViewHolder, position: Int) {
         holder.binding.textName.text = items[position].label.toString()
         holder.binding.textCost.text = items[position].value.toInt().toString()

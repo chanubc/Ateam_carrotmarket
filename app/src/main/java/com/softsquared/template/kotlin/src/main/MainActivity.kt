@@ -26,12 +26,12 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
                             .replace(R.id.main_frm, MainHomeFragment())
                             .commitAllowingStateLoss()
                     }
-                    R.id.menu_main_btm_nav_my_page -> {
+                    R.id.menu_main_btm_nav_townLife -> {
                         supportFragmentManager.beginTransaction()
                             .replace(R.id.main_frm, townFragment())
                             .commitAllowingStateLoss()
                     }
-                    R.id.menu_main_btm_nav_my_page -> {
+                    R.id.menu_main_btm_nav_chat -> {
                         supportFragmentManager.beginTransaction()
                             .replace(R.id.main_frm, ChatFragment())
                             .commitAllowingStateLoss()

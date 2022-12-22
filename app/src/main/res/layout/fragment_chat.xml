@@ -5,10 +5,11 @@
     android:layout_height="match_parent"
     tools:context=".src.main.myPage.ChatFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <ImageView
+        android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="fragmet chat" />
+        android:src="@drawable/chatting"/>
 
 </FrameLayout>
